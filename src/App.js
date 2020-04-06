@@ -12,11 +12,19 @@ function App() {
   const [goalProgress, setGoalProgress] = useState(0);
 
   const getPercent = (decimal) => {
-    return decimal * 100 + "%";
+    const val = (decimal * 100).toFixed(2);
+    return val + "%";
   };
 
   const calcGoalProgress = (total, goal) => {
     return getPercent(total / goal);
+  };
+
+  const handleChange = (e) => {
+    setSkiData({
+      ...skiData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   useEffect(() => {
@@ -34,6 +42,38 @@ function App() {
 
       <section>
         <h4>Update values</h4>
+        <label>Total Days:</label>
+        <input
+          type="number"
+          id="total"
+          name="total"
+          value={skiData.total}
+          onChange={handleChange}
+        ></input>
+        <label>Powder Days:</label>
+        <input
+          type="number"
+          id="powder"
+          name="powder"
+          value={skiData.powder}
+          onChange={handleChange}
+        ></input>
+        <label>Backcountry Days:</label>
+        <input
+          type="number"
+          id="backcountry"
+          name="backcountry"
+          value={skiData.backcountry}
+          onChange={handleChange}
+        ></input>
+        <label>Goal:</label>
+        <input
+          type="number"
+          id="goal"
+          name="goal"
+          value={skiData.goal}
+          onChange={handleChange}
+        ></input>
       </section>
     </div>
   );
