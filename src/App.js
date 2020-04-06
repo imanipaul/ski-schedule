@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [skiData, setSkiData] = useState({
@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <h2>Ski Data</h2>
       <section>
         <h3>Total Days: {skiData.total}</h3>
         <h3>Powder Days: {skiData.powder}</h3>
@@ -40,40 +41,53 @@ function App() {
         <h3>Goal Progress: {goalProgress}</h3>
       </section>
 
-      <section>
+      <section className="update">
         <h4>Update values</h4>
-        <label>Total Days:</label>
-        <input
-          type="number"
-          id="total"
-          name="total"
-          value={skiData.total}
-          onChange={handleChange}
-        ></input>
-        <label>Powder Days:</label>
-        <input
-          type="number"
-          id="powder"
-          name="powder"
-          value={skiData.powder}
-          onChange={handleChange}
-        ></input>
-        <label>Backcountry Days:</label>
-        <input
-          type="number"
-          id="backcountry"
-          name="backcountry"
-          value={skiData.backcountry}
-          onChange={handleChange}
-        ></input>
-        <label>Goal:</label>
-        <input
-          type="number"
-          id="goal"
-          name="goal"
-          value={skiData.goal}
-          onChange={handleChange}
-        ></input>
+        <div className="data-values">
+          <div>
+            <label>Total Days:</label>
+            <input
+              type="number"
+              id="total"
+              name="total"
+              value={skiData.total}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div>
+            <label>Powder Days:</label>
+            <input
+              type="number"
+              id="powder"
+              name="powder"
+              value={skiData.powder}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div>
+            <label>Backcountry Days:</label>
+            <input
+              type="number"
+              id="backcountry"
+              name="backcountry"
+              value={skiData.backcountry}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div>
+            <label>Goal:</label>
+            <input
+              type="number"
+              id="goal"
+              name="goal"
+              value={skiData.goal}
+              onChange={handleChange}
+            ></input>
+          </div>
+        </div>
       </section>
     </div>
   );
