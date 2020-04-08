@@ -17,9 +17,9 @@ export default function Example() {
       color: '#ffc107',
       backgroundColor: '#fffdee',
     },
-    outside: {
-      backgroundColor: 'white',
-    },
+    // outside: {
+    //   // backgroundColor: 'white',
+    // },
     selected: {
         backgroundColor: 'purple',
     }
@@ -32,14 +32,18 @@ export default function Example() {
   }
 
   return (
-    <DayPicker
-    //   month={new Date(2020, 3)}
-    //   modifiers={modifiers}
-      modifiersStyles={modifiersStyles}
-    selectedDays={selectedDays}
-    onDayClick={handleDayClick}
+    <section className = 'calendar'>
 
-    />
+      <DayPicker
+      //   month={new Date(2020, 3)}
+      //   modifiers={modifiers}
+        modifiersStyles={modifiersStyles}
+      selectedDays={selectedDays}
+      onDayClick={handleDayClick}
+      showOutsideDays
+  
+      />
+    </section>
   );
 }
 

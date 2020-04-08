@@ -11,10 +11,17 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className = 'content'>
+
       <Stats />
+
+      <div className = 'subcontent'>
+
+      <Notes />
       
       <Calendar />
-      <Notes />
+      </div>
+      </div>
       
     </div>
   );

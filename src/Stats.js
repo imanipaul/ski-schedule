@@ -11,6 +11,7 @@ export default function Stats() {
       });
     
       const [goalProgress, setGoalProgress] = useState(0);
+      const [other, setOther] = useState(0);
     
       const getPercent = (decimal) => {
         const val = (decimal * 100).toFixed(2);
@@ -24,26 +25,66 @@ export default function Stats() {
       const handleChange = (e) => {
         setSkiData({
           ...skiData,
-          [e.target.name]: e.target.value,
+          [e.target.name]: parseInt(e.target.value),
         });
       };
     
       useEffect(() => {
         setGoalProgress(calcGoalProgress(skiData.total, skiData.goal));
+        let extraDays = skiData.total - (skiData.powder + skiData.backcountry)
+        console.log('total', skiData.total)
+        console.log('powder', skiData.powder)
+        console.log('backcountry', skiData.backcountry)
+        console.log('extra days', extraDays)
+
+        setOther(skiData.total - (skiData.powder + skiData.backcountry));
       }, [skiData]);
 
       return (
-          <>
+          <section className = 'stats'>
         <h2>Ski Data</h2>
-        <section>
+
+        <table>
+          <thead>
+            <tr>
+            <th>Type</th>
+            <th>Value</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>Powder</td>
+            <td>{skiData.powder}</td>
+          </tr>
+          <tr>
+            <td>Backcountry</td>
+            <td>{skiData.backcountry}</td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>{other}</td>
+          </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+
+            <td>Total</td>
+            <td>{skiData.total}</td>
+            </tr>
+          </tfoot>
+        </table>
+          <h3>Goal Progress: {goalProgress}</h3>
+
+        {/* <div>
           <h3>Total Days: {skiData.total}</h3>
           <h3>Powder Days: {skiData.powder}</h3>
           <h3>Backcountry Days: {skiData.backcountry}</h3>
-          <h3>Goal Progress: {goalProgress}</h3>
-        </section>
+        </div> */}
   
-        <section className="update">
           <h4>Update values</h4>
+        <div className="update">
           <div className="data-values">
             <div>
               <label>Total Days:</label>
@@ -89,7 +130,7 @@ export default function Stats() {
               ></input>
             </div>
           </div>
+        </div>
         </section>
-        </>
       )
 }
