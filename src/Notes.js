@@ -4,15 +4,12 @@ export default function Notes() {
 
     const [allNotes, setAllNotes] = useState([])
 
-    const displayNotes = () => {
+    const handleSubmit = () => {
         let text = document.querySelector('textarea').value
         console.log(text)
         console.log('all notes was', allNotes)
         setAllNotes(allNotes => [...allNotes, text])
-        // console.log('all notes is', allNotes)
-        for (const note of allNotes) {
-        return <p>{note}</p>
-        }
+      
     }
 
     return (
@@ -25,11 +22,11 @@ export default function Notes() {
             <textarea>
 
             </textarea>
-            <button onClick={() => displayNotes()}>Submit</button>
+            <button onClick={() => handleSubmit()}>Submit</button>
             </div>
             <div className = 'all-notes'>
-                {allNotes.map((note) => {
-                    return <p key={note}>{note}</p>
+                {allNotes.map((note, index) => {
+                    return <p key={index}>{note}</p>
                 })}
             </div>
         </section>
