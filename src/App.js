@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Calendar from './Calendar';
 import "./App.scss";
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Calendar />
     </div>
   );
 }
