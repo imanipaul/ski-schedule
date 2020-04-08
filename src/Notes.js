@@ -58,7 +58,7 @@ export default function Notes() {
                 {allNotes.map((note, index) => {
                     return (
                     <div key={index+200} className = 'new-note'>
-                        <p key={index}>{note[0]  ? note[0] : ''}</p>
+                        <p key={index}>{note[0]  ? note[0] : 'unknown'}</p>
                         <p key={index+100}>{note[1]}</p>
                         </div>)
                 })}
