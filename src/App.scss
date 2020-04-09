@@ -23,6 +23,9 @@ html {
     justify-content: flex-end;
     height: 12vw;
     background-color: #02195e;
+    @media screen and (max-width: 761px) {
+      height: 15vw;
+    }
 
     h1 {
       margin: 0px;
@@ -45,6 +48,7 @@ html {
     div:first-of-type {
       text-align: left;
       padding-bottom: 20px;
+      margin-top: 2vw;
     }
 
     .line {
