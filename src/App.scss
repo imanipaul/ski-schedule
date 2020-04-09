@@ -62,9 +62,10 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       width: 35%;
       height: 95%;
+      overflow-y: scroll;
 
       //Notes styles
 
@@ -91,6 +92,7 @@ html {
 
             label {
               margin-right: 1vw;
+              font-size: 14pt;
             }
             // justify-content:
           }
@@ -104,6 +106,11 @@ html {
             background-color: transparent;
             border: 1px solid #02195e;
             margin-top: 20px;
+            font-size: 12pt;
+            width: 35%;
+            align-self: center;
+            border-radius: 20px;
+            color: white;
 
             &:hover {
               background-color: #fed801;
@@ -113,14 +120,18 @@ html {
 
           textarea {
             background-color: transparent;
-            border: 1px solid #fed801;
+            // border: 1px solid #fed801;
+            border: 1px solid white;
+            color: white;
+            font-size: 14pt;
           }
 
           input[type="date"] {
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid #fed801;
+            // border-bottom: 1px solid #fed801;
             color: white;
+            font-size: 12pt;
           }
         }
 
@@ -129,6 +140,7 @@ html {
           height: 120px;
           margin-left: 3vw;
           margin-top: 1vw;
+          color: white;
 
           .new-note {
             display: flex;
@@ -141,6 +153,7 @@ html {
               margin: 0px;
               padding: 0px;
               align-self: flex-end;
+              color: rgb(205, 205, 205);
             }
 
             p:last-of-type {
@@ -156,6 +169,17 @@ html {
         width: 100%;
         flex: 1;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          text-align: left;
+          align-self: flex-start;
+          color: #fed801;
+          margin-left: 3vw;
+        }
       }
     }
 
@@ -168,6 +192,7 @@ html {
       display: flex;
       flex-direction: column;
       border-radius: 10px;
+      overflow-y: scroll;
 
       h2 {
         color: #fed801;
@@ -206,9 +231,6 @@ html {
         tr {
           td:last-of-type {
             text-align: right;
-          }
-          td {
-            // font-weight: 400;
           }
         }
 
