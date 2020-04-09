@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from "react";
-import Calendar from './Calendar';
-import Header from './Header';
-import Stats from './Stats';
-import Notes from './Notes';
+import React, { useState } from "react";
+import Calendar from "./Calendar";
+import Header from "./Header";
+import Stats from "./Stats";
+import Notes from "./Notes";
 import "./App.scss";
 
 function App() {
- 
+  const [selectedDays, setSelectedDays] = useState([]);
 
   return (
     <div className="App">
       <Header />
-      <div className = 'content'>
+      <div className="content">
+        <Stats selectedDays={selectedDays} setSelectedDays={setSelectedDays} />
 
-      <Stats />
+        <div className="subcontent">
+          <Notes />
 
-      <div className = 'subcontent'>
-
-      <Notes />
-      
-      <Calendar />
+          <Calendar
+            selectedDays={selectedDays}
+            setSelectedDays={setSelectedDays}
+          />
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }

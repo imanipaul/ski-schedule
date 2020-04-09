@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 
-export default function Example() {
-  const [selectedDays, setSelectedDays] = useState([]);
+export default function Example(props) {
+  // const [selectedDays, setSelectedDays] = useState([]);
   const modifiers = {
     thursdays: { daysOfWeek: [4] },
     birthday: new Date(2020, 3, 2),
@@ -36,7 +36,7 @@ export default function Example() {
   };
 
   const handleDayClick = (day, { selected }) => {
-    setSelectedDays([...selectedDays, selected ? undefined : day]);
+    props.setSelectedDays([...props.selectedDays, selected ? undefined : day]);
   };
 
   return (
@@ -46,7 +46,7 @@ export default function Example() {
         //   month={new Date(2020, 3)}
         //   modifiers={modifiers}
         modifiersStyles={modifiersStyles}
-        selectedDays={selectedDays}
+        selectedDays={props.selectedDays}
         onDayClick={handleDayClick}
         showOutsideDays
       />
