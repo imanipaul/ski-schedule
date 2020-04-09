@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.7521ba99.chunk.css",
-    "main.js": "/static/js/main.52fdd262.chunk.js",
-    "main.js.map": "/static/js/main.52fdd262.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3e43706a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3e43706a.js.map",
-    "static/css/2.c6231af7.chunk.css": "/static/css/2.c6231af7.chunk.css",
-    "static/js/2.cb7f16f1.chunk.js": "/static/js/2.cb7f16f1.chunk.js",
-    "static/js/2.cb7f16f1.chunk.js.map": "/static/js/2.cb7f16f1.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.8f8ee1329322f099ac492526c88da5bb.js": "/precache-manifest.8f8ee1329322f099ac492526c88da5bb.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.c6231af7.chunk.css.map": "/static/css/2.c6231af7.chunk.css.map",
-    "static/css/main.7521ba99.chunk.css.map": "/static/css/main.7521ba99.chunk.css.map",
-    "static/js/2.cb7f16f1.chunk.js.LICENSE.txt": "/static/js/2.cb7f16f1.chunk.js.LICENSE.txt"
+    "main.css": "/ski-schedule/static/css/main.4bccf723.chunk.css",
+    "main.js": "/ski-schedule/static/js/main.8589367a.chunk.js",
+    "main.js.map": "/ski-schedule/static/js/main.8589367a.chunk.js.map",
+    "runtime-main.js": "/ski-schedule/static/js/runtime-main.56cde502.js",
+    "runtime-main.js.map": "/ski-schedule/static/js/runtime-main.56cde502.js.map",
+    "static/css/2.c6231af7.chunk.css": "/ski-schedule/static/css/2.c6231af7.chunk.css",
+    "static/js/2.26badd38.chunk.js": "/ski-schedule/static/js/2.26badd38.chunk.js",
+    "static/js/2.26badd38.chunk.js.map": "/ski-schedule/static/js/2.26badd38.chunk.js.map",
+    "index.html": "/ski-schedule/index.html",
+    "precache-manifest.b69e8f001338917f8796886abb5fee69.js": "/ski-schedule/precache-manifest.b69e8f001338917f8796886abb5fee69.js",
+    "service-worker.js": "/ski-schedule/service-worker.js",
+    "static/css/2.c6231af7.chunk.css.map": "/ski-schedule/static/css/2.c6231af7.chunk.css.map",
+    "static/css/main.4bccf723.chunk.css.map": "/ski-schedule/static/css/main.4bccf723.chunk.css.map",
+    "static/js/2.26badd38.chunk.js.LICENSE.txt": "/ski-schedule/static/js/2.26badd38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3e43706a.js",
+    "static/js/runtime-main.56cde502.js",
     "static/css/2.c6231af7.chunk.css",
-    "static/js/2.cb7f16f1.chunk.js",
-    "static/css/main.7521ba99.chunk.css",
-    "static/js/main.52fdd262.chunk.js"
+    "static/js/2.26badd38.chunk.js",
+    "static/css/main.4bccf723.chunk.css",
+    "static/js/main.8589367a.chunk.js"
   ]
 }
