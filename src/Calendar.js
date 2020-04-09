@@ -3,7 +3,7 @@ import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 
 export default function Example(props) {
-  // const [selectedDays, setSelectedDays] = useState([]);
+  const [allDays, setAllDays] = useState([]);
   const modifiers = {
     thursdays: { daysOfWeek: [4] },
     birthday: new Date(2020, 3, 2),
@@ -33,10 +33,41 @@ export default function Example(props) {
   };
 
   const handleDayClick = (day, { selected }) => {
-    props.setSelectedDays([...props.selectedDays, selected ? undefined : day]);
+    console.log("selected days ", props.selectedDays);
+    !selected &&
+      props.setSelectedDays([
+        ...props.selectedDays,
+        selected ? undefined : day,
+      ]);
+
+    const found = props.selectedDays.find(
+      (element) => Number(element) == Number(day)
+    );
+    console.log("found is", found);
+    const find = props.selectedDays.indexOf(found);
+    console.log("find", props.selectedDays.indexOf(found));
+
+    let holder = props.selectedDays;
+    console.log("all days was", holder);
+    if (find > -1) {
+      holder.splice(find, 1);
+      console.log("all days", holder);
+      // let newDays = props.selectedDays.splice(find, 1);
+      // console.log("newDays", newDays);
+      // console.log("new selected days", props.selectedDays);
+      // props.setSelectedDays(allDays);
+      setAllDays(holder);
+    }
+
+    console.log("all days", allDays);
+
+    // console.log("day", day);
+    // console.log("day number", Number(day));
   };
 
-  useEffect(() => {});
+  useEffect(() => {
+    props.setSelectedDays(allDays);
+  }, [allDays]);
 
   const handleType = (e) => {
     console.log("dropdown value", e.target.value);
