@@ -174,11 +174,19 @@ html {
         align-items: center;
         justify-content: center;
 
-        h3 {
+        div:first-of-type {
+          width: 100%;
           text-align: left;
-          align-self: flex-start;
-          color: #fed801;
-          margin-left: 3vw;
+          h3 {
+            margin-left: 3vw;
+            text-align: left;
+            align-self: flex-start;
+            color: #fed801;
+            display: inline-block;
+          }
+          select {
+            margin-left: 11vw;
+          }
         }
       }
     }

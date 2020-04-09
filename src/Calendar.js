@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DayPicker from "react-day-picker";
 import "react-day-picker/lib/style.css";
 
@@ -17,9 +17,6 @@ export default function Example(props) {
       color: "#ffc107",
       backgroundColor: "#fffdee",
     },
-    // outside: {
-    //   // backgroundColor: 'white',
-    // },
     selected: {
       backgroundColor: "#becbf4",
       color: "black",
@@ -39,9 +36,24 @@ export default function Example(props) {
     props.setSelectedDays([...props.selectedDays, selected ? undefined : day]);
   };
 
+  useEffect(() => {});
+
+  const handleType = (e) => {
+    console.log("dropdown value", e.target.value);
+    props.setSelectedType(e.target.value);
+  };
+
   return (
     <section className="calendar">
-      <h3>Calendar</h3>
+      <div>
+        <h3>Calendar</h3>
+        <select name="type" onChange={handleType}>
+          <option value="">Select Type</option>
+          <option value="powder">Powder</option>
+          <option value="backcountry">Backcountry</option>
+          <option value="total">Total</option>
+        </select>
+      </div>
       <DayPicker
         //   month={new Date(2020, 3)}
         //   modifiers={modifiers}
